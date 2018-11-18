@@ -4,6 +4,14 @@ module.exports = function(sequelize, DataTypes) {
       price: DataTypes.DECIMAL(10,2),
       quantity: DataTypes.INTEGER
     });
+
+    Order.associate = function(models) {
+      Order.belongsTo(models.Reservation, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
     return Order;
   };
   
