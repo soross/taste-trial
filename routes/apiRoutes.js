@@ -3,7 +3,9 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all reservations
   app.get("/api/reservations", function(req, res) {
-    db.Reservation.findAll({}).then(function(dbReservations) {
+    db.Reservation.findAll({
+      include: [db.Order]
+    }).then(function(dbReservations) {
       res.json(dbReservations);
     });
   });

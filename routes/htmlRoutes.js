@@ -1,5 +1,7 @@
 var db = require("../models");
 
+var path = require('path');
+
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
@@ -19,6 +21,14 @@ module.exports = function(app) {
       });
     });
   });
+
+  app.get('/menu', function (req, res) {
+		res.sendFile(path.join(__dirname, "../public/menu/menu.html"));
+  });
+  
+  app.get('/kitchen', function (req, res){
+    res.sendFile(path.join(__dirname, "../public/kitchen/kitchen.html"));
+  })
 
   // May need to be inluded somewhere else:
   
