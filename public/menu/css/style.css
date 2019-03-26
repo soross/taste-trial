@@ -230,6 +230,8 @@ h1, h2, h3, h4, h5,
       margin-bottom: 5px; }
 
 .btn {
+  position:relative;
+  left: 150px;
   border-radius: 4px;
   cursor: pointer;
   padding-left: 30px;
