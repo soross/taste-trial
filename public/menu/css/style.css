@@ -205,8 +205,8 @@ h1, h2, h3, h4, h5,
 .menu-item {
   margin-bottom: 30px; }
   .menu-item img {
-    width: 100px;
-    border-radius: 50%; }
+    width: 200px;
+    border-radius: 10%; }
   .menu-item .menu-price {
     font-family: "Playfair Display", serif;
     font-size: 24px; }
