@@ -347,10 +347,6 @@
   <script type='text/javascript' src="js/jquery.mycart.js"></script>
   <script type="text/javascript">
 
-    var resvNum = prompt("Reservation Number?");
-
-    console.log(resvNum);
-
     $(function () {
 
       var goToCartIcon = function ($addTocartBtn) {
@@ -388,6 +384,11 @@
           console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
         },
         checkoutCart: function (products, totalPrice, totalQuantity) {
+          
+          var resvNum = prompt("请输入手机号?");
+
+          console.log(resvNum);
+          
           var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
           checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
           $.each(products, function () {
